@@ -1,0 +1,101 @@
+/* .reveal p { text-align: left; }  */
+/*left align the text*/
+/* .reveal section:not(.centered), .reveal section:not(.centered) h1, .reveal section:not(.centered) h2, .reveal section:not(.centered) h3, .reveal section:not(.centered) h4, .reveal section:not(.centered) h5, .reveal section:not(.centered) h6 { */
+/*   text-align: left; } */
+
+/* screw it, left align everything */
+.reveal .slides { text-align: left; }
+
+/* fix the font sizes */
+/* see https://github.com/FerryT/TU-Eindhoven-Reveal.js-Theme/blob/master/css/theme/tue2018.css */
+.reveal {
+  font-family: 'Charis SIL', 'Palatino Linotype', 'Book Antiqua', Palatino, FreeSerif, serif;
+  font-size: 31px;
+  font-weight: normal; }
+
+body { counter-reset: ex; }
+
+.reveal h1 {
+  font-size: 2.5em; }
+
+.reveal h2 {
+  font-size: 1.8em; }
+
+.reveal h3 {
+  font-size: 1.4em; }
+
+.reveal h4 {
+  font-size: 1.25em; }
+
+.reveal h1 {
+  text-shadow: none; }
+
+ol, ul { text-align: left; }
+
+@counter-style lingex-list-style {
+    system: extends decimal;
+    prefix: '(';
+    suffix: ') ';
+}
+
+ol.lingex table { display: inline-table; margin: 0; font-size: 1em; }
+ol.lingex td {
+    /* padding: 0.25rem; */
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 1rem;
+    padding-right: rem;
+    vertical-align: baseline;
+    border-style : hidden!important; }
+/* ol.lingex td { padding: 1rem; vertical-align: baseline; border-style : hidden!important; } */
+/* #content { counter-reset: ex; } */
+ol.lingex table ~ p { margin: 0; }
+ol.lingex > li { list-style: lingex-list-style;}
+/* ol.lingex > li { list-style: none; counter-increment: ex; } */
+/* ol.lingex > li::marker { content: "(" counter(ex) ")\a0"; } */
+ol.sublingex { list-style-type: lower-alpha; padding-left: 1.25em; }
+
+div.lcol { float: left; width: 50%; }
+div.rcol { float: right; width: 50%; }
+
+dd,dt { display: inline; }
+dd::after { content: ""; display: block; }
+
+.reveal ul ul {
+  font-size: .85em; }
+
+.reveal table {
+  font-size: .7em;
+  margin: 1em auto; }
+
+
+/* .reveal table { */
+    /* border-collapse: collapse; */
+    /* border-style : hidden!important; */
+/* } */
+
+.reveal table td {
+	text-align: left;
+	padding: 0.2em 0.5em 0.2em 0.5em;
+	border-bottom: 0px;
+
+.reveal table > :is(thead, tbody) > tr > :is(th, td) {
+  padding: 3px;
+  text-align: left;
+}
+.reveal table > thead > tr > :is(th, td) {
+  border-top: 2px solid;
+  border-bottom: 1px solid;
+}
+
+.reveal table > tbody > tr:last-child > :is(th, td) {
+  border-bottom: 2px solid;
+}
+
+.scrollable {
+    overflow: scroll !important;
+    pointer-events: auto !important;
+    /* overflow-y: auto !important; */
+    /* overflow-x: hidden !important; */
+    /* height: 700px; */
+}
